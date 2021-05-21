@@ -1,0 +1,243 @@
+GIT Tutorials
+https://www.theodinproject.com/courses/web-development-101/lessons/introduction-to-git
+https://www.theodinproject.com/courses/web-development-101/lessons/git-basics
+https://www.theodinproject.com/courses/web-development-101/lessons/practicing-git-basics
+
+https://microverse.pathwright.com/library/microverse-onboarding/86777/path/step/53987916/
+
+GITHUB FLOW
+https://guides.github.com/introduction/flow/
+https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
+
+
+GIT COMMANDS
+
+1. Create new branch
+git checkout -b new_branch
+
+2. See all branches
+git branch -a
+
+3. Delete a branch
+git branch -D new_branch
+
+4. Change to an existing branch
+git checkout master
+
+5. Add a new file to branch
+git add .
+
+6. Commit file
+git commit -m "This message accompanies a new file"
+
+7. Merge files
+git merge new_branch
+
+8. View log file
+git log --oneline
+
+9. View status of repository
+git status
+
+10. Create alias for a github repository
+git remote add origin https://github.com/kiptubei/URL-Shortnener.git   nb the alias in this case is called origin
+
+11. Push local repository master branch to remote repository of alias origin
+git push origin master
+git push https://github.com/haraphat01/mark_arafat_youtube.git master
+
+
+12. Clone a remote repository from github to local machine
+git clone https://github.com/kiptubei/URL-Shortnener.git
+
+13. Pull from master to local repository
+git checkout master
+git pull origin master
+
+14. Create repository
+git init
+
+15. Remove from ataging are
+git rm --cached <filename>
+
+16. Undoing commits
+Checkout ,Revert ,Reset
+git checkout u876543
+git revert h767896
+git reset j78770 --hard
+
+.......................................................................................................
+Adding an existing project to GitHub using the command line
+
+1.Create a new repository on GitHub. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
+
+2.Initialize the local directory as a Git repository.
+
+  	$ git init
+
+3.Add the files in your new local repository. This stages them for the first commit.
+
+	$ git add .
+	# Adds the files in the local repository and stages them for commit
+
+4.Commit the files that you've staged in your local repository.
+
+	$ git commit -m "First commit"
+	# Commits the tracked changes and prepares them to be pushed to a remote repository. 
+	To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+
+
+5.In Terminal, add the URL for the remote repository where your local repository will be pushed.
+
+	$ git remote add origin <remote repository URL>
+	# Sets the new remote
+	$ git remote -v
+	# Verifies the new remote URL
+
+6.Push the changes in your local repository to GitHub.
+
+	$ git push origin master
+	# Pushes the changes in your local repository up to the remote repository you specified as the origin
+
+--------------------------------------------------------------------------------------------------
+pull and use specific folder in a github repository
+
+git init
+git remote add -f origin <url>
+git config core.sparsecheckout true
+echo <dir1>/ >> .git/info/sparse-checkout
+echo <dir2>/ >> .git/info/sparse-checkout
+echo <dir3>/ >> .git/info/sparse-checkout
+git pull origin master
+
+---------------------------------------------------------------------------------------------
+Microverse procedure
+
+Create directory with the same name as that of the project
+mkdir Mark_And_Arafat_Test
+cd into it
+
+git init
+git remote add origin https://github.com/kiptubei/Mark_And_Haraphat_Test.git
+git remote -v
+
+git checkout master
+git fetch origin
+git reset --hard origin/master
+
+
+git checkout -b marks-feature master  //creates a new branch called marks-feature based on master
+
+git status
+git add <some-file>
+git commit -m "Message"
+
+git push -u origin marks-feature
+
+git push
+
+(Merge back to master)
+git checkout master
+git pull
+git pull origin marks-feature
+git push
+
+
+(To overwrite a local branch and pull new sources from the remote branch)
+git checkout nav-bar
+git fetch --all
+git reset --hard origin/nav-bar
+
+------------------------------------------------------------------------------------------------
+Atom merge conflicts  ALT+M+D
+
+----------------------------------------------------------------------------------------------
+RENAME GIT BRANCH
+
+1. Rename your local branch.
+If you are on the branch you want to rename:
+
+1
+git branch -m new-name
+If you are on a different branch:
+
+1
+git branch -m old-name new-name
+2. Delete the old-name remote branch and push the new-name local branch.
+
+1
+git push origin :old-name new-name
+3. Reset the upstream branch for the new-name local branch.
+Switch to the branch and then:
+
+1
+git push origin -u new-name
+
+
+--------------------------------------------------------------------------------------------------
+CHECKOUT SPECIFIC FOLDER FROM REPO
+
+
+    git init <repo>
+
+    cd <repo>
+
+    git remote add origin <url>
+
+    git config core.sparsecheckout true
+
+    echo "folder-name/*" >> .git/info/sparse-checkout
+
+    git pull --depth=1 origin master
+
+-------------------------------------------------------------------------------------------------
+
+Merging via command line
+If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line.
+
+HTTPS
+Git
+Patch
+https://github.com/kiptubei/The-Next-Web.git
+
+Step 1: From your project repository, bring in the changes and test.
+
+git fetch origin
+git checkout -b feature-TNW-responsive origin/feature-TNW-responsive
+git merge master2
+
+Step 2: Merge the changes and update on GitHub.
+
+git checkout master2
+git merge --no-ff feature-TNW-responsive
+git push origin master2
+
+
+sync develop and feature branches
+git checkout develop    #if you don't have it already
+git checkout feature/x  #if you don't have it already
+git pull --all
+
+merger develop and feature branch
+git merge develop
+
+
+-------------------------------------------------------------------------------------------------------------------
+SHOWING CHANGES FOR A SPECIFIC FILE
+
+git log -p filename.js 
+
+
+--------------------------------------------------------------------
+git stash
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+
+
