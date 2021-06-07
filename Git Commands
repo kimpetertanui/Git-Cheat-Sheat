@@ -212,6 +212,10 @@ git checkout master2
 git merge --no-ff feature-TNW-responsive
 git push origin master2
 
+Step 3: Once merged delete the branch locally and remotely
+git branch -d feature-TNW-responsive  (local delete)
+git push -d origin feafeature-TNW-responsive
+
 
 sync develop and feature branches
 git checkout develop    #if you don't have it already
