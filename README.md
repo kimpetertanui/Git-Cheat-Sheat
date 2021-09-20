@@ -20,6 +20,8 @@ I keep it updated with new suff I come across that I might need again in future.
 
 👤 **Mark James Kiptubei**
 
+👤 **Peter Kimeli Tanui**
+
 - Twitter: [@mjabei](https://twitter.com/mjabei)
 - Linkedin: [@Mark James KIptubei](https://www.linkedin.com/in/kiptubei/)
 - https://github.com/kiptubei/Git-Cheat-Sheet.git
